@@ -22,4 +22,11 @@ public class ToDoItemService {
         System.out.println("Getting to do items.");
         return toDoItemRepository.getToDoItems();
     }
+
+    public void deleteToDoItem(long id) throws SQLException, IOException, ClassNotFoundException {
+        System.out.println("Deleting to do item " + id);
+        toDoItemRepository.deleteToDoItem(id);
+        System.out.println("Deleted to do item " + id);
+    }
+
 }
